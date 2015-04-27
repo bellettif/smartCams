@@ -23,7 +23,7 @@ img_png[:,:] = img[:,:]
 
 img_png = cv2.blur(img_png, (16, 16))
 
-thr = 110
+thr = 90
 
 ret, thresh3 = cv2.threshold(img_png, thr, 255, cv2.THRESH_TOZERO_INV)
 ret, thresh4 = cv2.threshold(img_png, 255 - thr, 255, cv2.THRESH_TOZERO)
@@ -50,12 +50,12 @@ for contour in contours:
     probas /= float(np.sum(probas))
     entropy = - np.sum(probas * np.log(probas))
     #
-    plt.subplot(211)
-    plt.imshow(sub_pict)
-    plt.subplot(212)
-    plt.title('Entropy = %f' % entropy)
-    plt.hist(np.ravel(sub_pict), bins = 256)
-    plt.show()
+    #plt.subplot(211)
+    #plt.imshow(sub_pict)
+    #plt.subplot(212)
+    #plt.title('Entropy = %f' % entropy)
+    #plt.hist(np.ravel(sub_pict), bins = 256)
+    #plt.show()
     cv2.rectangle(img_png, (x, y), (x + w, y + h), (255, 255, 255))
     
 plt.imshow(img_png, cmap = plt.get_cmap('gray'))
