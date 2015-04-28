@@ -53,7 +53,7 @@ def get_bbx(seg, thr = 100, blur = 6):
 #
 input_folder = '../processed_imgs/'
 output_folder = '../region_proposals/'
-frame = 80
+frame = 47
 #
 dump = pickle.load(open('%sseg_example_%d.pi' % (input_folder, frame), 'rb'))
 #
@@ -69,13 +69,14 @@ for contour in contours:
     print rect
     if (w < 2) or (h < 2):
         continue
-    sub_pict = original[y:(y + h), x:(x + w)]
+    y_b = max(y - 0.5 * h, 0)
+    y_e = min(y + 1.5 * h, original.shape[0])
+    x_b = max(x - 0.5 * w, 0)
+    x_e = min(x + 1.5 * w, original.shape[1])
+    sub_pict = original[y_b:y_e, x_b:x_e]
     sub_picts.append(sub_pict)
     #cv2.rectangle(original, (x, y), (x + w, y + h), (255, 255, 255))
 
 for i, sub_pict in enumerate(sub_picts):
     if sub_pict.shape[0] > 100 or sub_pict.shape[1] > 100:
         cv2.imwrite('../region_proposals/%d_%d_bbx.png' % (frame, i), sub_pict)
-    
-    
-    
