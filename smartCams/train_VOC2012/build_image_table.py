@@ -11,12 +11,15 @@ import os
 import xml.etree.ElementTree as ET
 import cv2
 import numpy as np
+import caffe
+
+MAX_N_IMAGES = 1e3
 
 main_dir            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
 image_set_folder    = main_dir + 'VOC2012/ImageSets/Main/'
 jpeg_folder         = main_dir + 'VOC2012/JPEGImages/'
 annotation_folder   = main_dir + 'VOC2012/Annotations/'
-output_cropped      = main_dir + 'VOC2012/Warped_data/'
+output_cropped      = 'Warped_data_small/'
 
 all_sets = os.listdir(image_set_folder)
 
@@ -64,9 +67,9 @@ def filter_file_list(file_list, extension = '.xml'):
 
 annotation_list = filter_file_list(os.listdir(annotation_folder))
 
-output_file = open('VOC_windows.txt', 'wb')
-crop_outputfile_train = open('VOC_cropped_warped_train.txt', 'wb')
-crop_outputfile_test = open('VOC_cropped_warped_test.txt', 'wb')
+output_file = open('VOC_windows_small.txt', 'wb')
+crop_outputfile_train = open('VOC_cropped_warped_train_small.txt', 'wb')
+crop_outputfile_test = open('VOC_cropped_warped_test_small.txt', 'wb')
 
 idx = 0
 iidx = 0
@@ -104,8 +107,10 @@ for annotation in annotation_list:
             crop_outputfile_train.write(output_path + ' ' + str(num_labels[bbx['name']]) + '\n')
         cv2.imwrite(output_path, sub_image)
         iidx += 1
-        
-print iidx
+        if iidx > MAX_N_IMAGES:
+            break
+    if iidx > MAX_N_IMAGES:
+        break
 
 mean_image /= float(iidx)
 mean_image = mean_image.astype(np.uint8)
