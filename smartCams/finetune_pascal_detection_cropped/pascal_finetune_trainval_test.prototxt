@@ -1,48 +1,28 @@
 name: "CaffeNet"
 layer {
   name: "data"
-  type: "WindowData"
+  type: "ImageData"
   top: "data"
   top: "label"
   include {
     phase: TRAIN
   }
-  transform_param {
-    mirror: true
-    crop_size: 227
-    mean_file: "/Users/cusgadmin/caffe/data/ilsvrc12/imagenet_mean.binaryproto"
-  }
-  window_data_param {
-    source: "/Users/cusgadmin/caffe/examples/finetune_pascal_detection/VOC_windows.txt"
+  image_data_param {
+    source: "VOC_cropped_warped_train.txt"
     batch_size: 128
-    fg_threshold: 0.5
-    bg_threshold: 0.5
-    fg_fraction: 0.25
-    context_pad: 16
-    crop_mode: "warp"
   }
 }
 layer {
   name: "data"
-  type: "WindowData"
+  type: "ImageData"
   top: "data"
   top: "label"
   include {
     phase: TEST
   }
-  transform_param {
-    mirror: true
-    crop_size: 227
-    mean_file: "/Users/cusgadmin/caffe/data/ilsvrc12/imagenet_mean.binaryproto"
-  }
-  window_data_param {
-    source: "/Users/cusgadmin/caffe/examples/finetune_pascal_detection/VOC_windows.txt"
+  image_data_param {
+    source: "VOC_cropped_warped_test.txt"
     batch_size: 128
-    fg_threshold: 0.5
-    bg_threshold: 0.5
-    fg_fraction: 0.25
-    context_pad: 16
-    crop_mode: "warp"
   }
 }
 layer {

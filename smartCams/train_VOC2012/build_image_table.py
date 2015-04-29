@@ -2,21 +2,30 @@
 Created on Apr 27, 2015
 
     Consolidate the VOC image set around cars, persons and bicycles
+    Extract cropped and warped windows from the dataset so as to use the Pascal VOC network
 
 @author: Francois Belletti
 '''
 
 import os
 import xml.etree.ElementTree as ET
+import cv2
+import numpy as np
 
 main_dir            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
 image_set_folder    = main_dir + 'VOC2012/ImageSets/Main/'
 jpeg_folder         = main_dir + 'VOC2012/JPEGImages/'
 annotation_folder   = main_dir + 'VOC2012/Annotations/'
+output_cropped      = main_dir + 'VOC2012/Warped_data/'
 
 all_sets = os.listdir(image_set_folder)
 
 target_labels = ['person', 'bicycle', 'bus', 'car', 'motorbike']
+num_labels = {'person' : 0,
+              'bicycle' : 1,
+              'bus' : 2,
+              'car' : 3,
+              'motorbike' : 4}
 
 def extract_bbxes(file_path):
     tree = ET.parse(file_path)
@@ -30,8 +39,6 @@ def extract_bbxes(file_path):
             'depth' : size_xml.find('depth').text}
     for object in objects:
         bbx = object.find('bndbox')
-        width = int(float(bbx.find('xmax').text)) - int(float(bbx.find('xmin').text))
-        heigth = int(float(bbx.find('ymax').text)) - int(float(bbx.find('ymin').text))
         bbxes.append({
                       'name' : object.find('name').text,
                       'xmin' : int(float(bbx.find('xmin').text)),
@@ -46,11 +53,11 @@ def filter_boxes(target_label, bbxes):
 
 def format_box(bbox):
     return '%s %.3f %d %d %d %d' % (bbox['name'],
-                                    1.0,
-                                    bbox['xmin'],
+                                    0.1,
                                     bbox['ymin'],
-                                    bbox['xmax'],
-                                    bbox['ymax'])
+                                    bbox['xmin'],
+                                    bbox['ymax'],
+                                    bbox['xmax'])
 
 def filter_file_list(file_list, extension = '.xml'):
     return filter(lambda x : x[-4:] == extension, file_list)
@@ -58,14 +65,20 @@ def filter_file_list(file_list, extension = '.xml'):
 annotation_list = filter_file_list(os.listdir(annotation_folder))
 
 output_file = open('VOC_windows.txt', 'wb')
+crop_outputfile_train = open('VOC_cropped_warped_train.txt', 'wb')
+crop_outputfile_test = open('VOC_cropped_warped_test.txt', 'wb')
 
 idx = 0
+iidx = 0
+mean_image = np.zeros((227, 227, 3), dtype = np.double)
+#
 for annotation in annotation_list:
     file_path = annotation_folder + annotation
     size, bbxes = extract_bbxes(file_path)
     bbxes = filter(lambda x : x['name'] in target_labels, bbxes)
     if len(bbxes) == 0:
         continue
+    image_path = jpeg_folder + annotation[:-4] + '.jpg'
     lines_to_write = ['# ' + str(idx),
                       jpeg_folder + annotation[:-4] + '.jpg',
                       str(size['depth']),
@@ -76,14 +89,25 @@ for annotation in annotation_list:
     lines_to_write.append('\n')
     output_file.write('\n'.join(lines_to_write))
     idx += 1
+    #
+    pict = cv2.imread(image_path)
+    for bbx in bbxes:
+        sub_image = pict[bbx['ymin']:bbx['ymax'], bbx['xmin']:bbx['xmax']].copy()
+        sub_image = cv2.resize(sub_image, (227, 227))
+        #
+        mean_image += sub_image
+        #
+        output_path = output_cropped + ('pict_%d.jpg' % iidx)
+        if np.random.uniform() > 0.9:
+            crop_outputfile_test.write(output_path + ' ' + str(num_labels[bbx['name']]) + '\n')
+        else:
+            crop_outputfile_train.write(output_path + ' ' + str(num_labels[bbx['name']]) + '\n')
+        cv2.imwrite(output_path, sub_image)
+        iidx += 1
+        
+print iidx
 
-#The window file format contains repeated blocks of:
-#
-#    image_index
-#    img_path
-#    channels
-#    height 
-#    width
-#    num_windows
-#    class_index overlap x1 y1 x2 y2
-#    <... num_windows-1 more windows follow ...>    
+mean_image /= float(iidx)
+mean_image = mean_image.astype(np.uint8)
+
+cv2.imwrite(output_cropped + 'mean_image.jpg', mean_image)
