@@ -71,6 +71,23 @@ int main(int argc, char** argv) {
     
     imwrite(input_file_name  + ".check.jpg", cv_test);
     
+    sum_blob.set_num(1);
+    sum_blob.set_channels(datum.channels());
+    sum_blob.set_height(datum.height());
+    sum_blob.set_width(datum.width());
+    
+    std::cout << datum.data().size() << std::endl;
+    
+    int size_in_datum = datum.data().size();
+    
+    
+    for (int i = 0; i < size_in_datum; ++i) {
+        sum_blob.add_data(0.);
+    }
+    for (int i = 0; i < size_in_datum; ++i) {
+      sum_blob.set_data(i, datum.data()[i]);
+    }
+    
     // Write to disk
     if (argc == 3) {
         LOG(INFO) << "Write to " << argv[2];

@@ -26,7 +26,7 @@ main_dir            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
 image_set_folder    = main_dir + 'VOC2012/ImageSets/Main/'
 jpeg_folder         = main_dir + 'VOC2012/JPEGImages/'
 annotation_folder   = main_dir + 'VOC2012/Annotations/'
-output_cropped      = 'warped_data_%s/' % data_set_suffix
+output_cropped      = '../warped_data/'
 
 all_sets = os.listdir(image_set_folder)
 
@@ -74,9 +74,9 @@ def filter_file_list(file_list, extension = '.xml'):
 
 annotation_list = filter_file_list(os.listdir(annotation_folder))
 
-output_file = open('VOC_windows.txt', 'wb')
-crop_outputfile_train = open('VOC_cropped_warped_train_%s.txt' % data_set_suffix, 'wb')
-crop_outputfile_test = open('VOC_cropped_warped_test_%s.txt' % data_set_suffix, 'wb')
+output_file = open('../finetuning/VOC_windows.txt', 'wb')
+crop_outputfile_train = open('../finetuning/VOC_cropped_warped_train_%s.txt' % data_set_suffix, 'wb')
+crop_outputfile_test = open('../finetuning/VOC_cropped_warped_test_%s.txt' % data_set_suffix, 'wb')
 
 idx = 0
 iidx = 0
