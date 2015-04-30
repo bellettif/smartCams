@@ -1,0 +1,1451 @@
+# 0
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000027.jpg
+3
+500
+486
+1
+person 0.100 101 174 351 349
+
+# 1
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000032.jpg
+3
+281
+500
+2
+person 0.100 180 195 229 213
+person 0.100 189 26 238 44
+
+# 2
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000129.jpg
+3
+500
+334
+6
+bicycle 0.100 202 70 500 255
+bicycle 0.100 242 251 500 334
+bicycle 0.100 144 1 436 67
+person 0.100 1 1 363 66
+person 0.100 1 74 462 272
+person 0.100 19 252 487 334
+
+# 3
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000170.jpg
+3
+375
+500
+2
+person 0.100 91 3 206 43
+person 0.100 28 4 372 461
+
+# 4
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000272.jpg
+3
+500
+333
+1
+person 0.100 71 25 500 304
+
+# 5
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000323.jpg
+3
+375
+500
+2
+person 0.100 3 277 375 500
+person 0.100 3 12 375 305
+
+# 6
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000346.jpg
+3
+375
+500
+3
+person 0.100 78 137 375 497
+person 0.100 202 89 247 129
+person 0.100 209 72 259 111
+
+# 7
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000364.jpg
+3
+375
+500
+3
+motorbike 0.100 25 54 315 454
+motorbike 0.100 37 318 161 489
+person 0.100 1 369 130 458
+
+# 8
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000392.jpg
+3
+332
+500
+1
+person 0.100 58 198 197 286
+
+# 9
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000423.jpg
+3
+375
+500
+2
+person 0.100 80 51 266 122
+person 0.100 92 367 315 461
+
+# 10
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000480.jpg
+3
+375
+500
+3
+person 0.100 162 293 375 419
+person 0.100 165 114 373 228
+person 0.100 172 5 373 116
+
+# 11
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000504.jpg
+3
+412
+500
+3
+person 0.100 34 36 123 79
+person 0.100 44 2 120 36
+person 0.100 42 29 64 41
+
+# 12
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000515.jpg
+3
+375
+500
+4
+bicycle 0.100 199 1 293 40
+person 0.100 85 1 279 29
+car 0.100 164 64 210 151
+car 0.100 167 147 200 186
+
+# 13
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000529.jpg
+3
+375
+500
+1
+car 0.100 237 422 255 461
+
+# 14
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000572.jpg
+3
+331
+500
+2
+bicycle 0.100 178 1 331 235
+bicycle 0.100 134 8 297 226
+
+# 15
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000584.jpg
+3
+375
+500
+1
+bicycle 0.100 74 31 346 369
+
+# 16
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000629.jpg
+3
+230
+500
+1
+person 0.100 100 87 124 107
+
+# 17
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000648.jpg
+3
+333
+500
+6
+person 0.100 199 394 223 404
+person 0.100 199 424 220 436
+person 0.100 196 434 220 444
+person 0.100 195 443 220 452
+bus 0.100 113 29 266 353
+car 0.100 213 2 235 28
+
+# 18
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000663.jpg
+3
+500
+422
+6
+bus 0.100 2 12 467 417
+car 0.100 39 7 94 63
+car 0.100 24 362 53 422
+car 0.100 36 376 81 422
+car 0.100 68 373 108 422
+car 0.100 98 376 210 422
+
+# 19
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000664.jpg
+3
+375
+500
+1
+person 0.100 2 51 375 325
+
+# 20
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000727.jpg
+3
+500
+375
+8
+bus 0.100 323 89 436 273
+car 0.100 369 272 388 323
+car 0.100 380 2 435 89
+person 0.100 356 333 438 358
+person 0.100 357 319 424 341
+person 0.100 363 354 414 375
+car 0.100 367 49 389 90
+car 0.100 138 113 164 160
+
+# 21
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000733.jpg
+3
+435
+450
+2
+person 0.100 25 48 383 273
+motorbike 0.100 201 103 435 448
+
+# 22
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000762.jpg
+3
+375
+500
+6
+person 0.100 61 382 261 500
+person 0.100 142 342 202 393
+person 0.100 127 143 223 266
+person 0.100 140 199 187 220
+person 0.100 22 4 252 124
+person 0.100 249 3 328 174
+
+# 23
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000768.jpg
+3
+375
+500
+2
+bus 0.100 103 369 283 475
+bus 0.100 46 33 330 369
+
+# 24
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000783.jpg
+3
+437
+480
+1
+person 0.100 57 201 259 325
+
+# 25
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000793.jpg
+3
+375
+500
+10
+person 0.100 100 289 183 316
+person 0.100 111 241 180 270
+person 0.100 107 218 178 236
+person 0.100 67 402 259 467
+person 0.100 110 65 161 84
+person 0.100 107 96 159 114
+person 0.100 78 100 282 190
+person 0.100 103 273 182 295
+bicycle 0.100 160 151 280 310
+bus 0.100 80 2 135 51
+
+# 26
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000799.jpg
+3
+441
+500
+1
+person 0.100 225 230 441 500
+
+# 27
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000807.jpg
+3
+500
+334
+1
+person 0.100 31 34 500 200
+
+# 28
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000822.jpg
+3
+374
+500
+2
+motorbike 0.100 165 98 346 230
+motorbike 0.100 168 231 323 353
+
+# 29
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000836.jpg
+3
+480
+318
+1
+person 0.100 99 69 297 224
+
+# 30
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000847.jpg
+3
+500
+375
+1
+person 0.100 111 61 500 296
+
+# 31
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000862.jpg
+3
+375
+500
+1
+person 0.100 131 305 151 318
+
+# 32
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000904.jpg
+3
+375
+500
+1
+person 0.100 113 17 238 165
+
+# 33
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_000999.jpg
+3
+500
+375
+1
+person 0.100 16 2 500 280
+
+# 34
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001027.jpg
+3
+375
+500
+1
+bicycle 0.100 156 58 218 94
+
+# 35
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001175.jpg
+3
+375
+500
+2
+person 0.100 153 119 329 367
+person 0.100 169 157 230 256
+
+# 36
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001185.jpg
+3
+375
+500
+1
+person 0.100 78 78 375 289
+
+# 37
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001284.jpg
+3
+375
+500
+6
+person 0.100 123 135 375 235
+person 0.100 115 238 304 376
+person 0.100 117 276 360 426
+person 0.100 114 301 375 500
+person 0.100 114 1 375 126
+person 0.100 90 419 139 448
+
+# 38
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001311.jpg
+3
+319
+500
+10
+bicycle 0.100 104 465 166 490
+bicycle 0.100 118 432 186 465
+bicycle 0.100 128 334 220 380
+bicycle 0.100 188 177 319 304
+bicycle 0.100 161 12 319 181
+person 0.100 67 463 154 495
+person 0.100 75 431 171 468
+person 0.100 79 333 201 387
+person 0.100 106 187 293 291
+person 0.100 61 27 280 163
+
+# 39
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001321.jpg
+3
+333
+500
+1
+car 0.100 98 1 333 456
+
+# 40
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001340.jpg
+3
+375
+500
+2
+person 0.100 140 150 375 252
+person 0.100 111 92 374 331
+
+# 41
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001408.jpg
+3
+500
+333
+3
+person 0.100 107 56 387 230
+person 0.100 1 210 108 333
+person 0.100 87 84 366 333
+
+# 42
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001420.jpg
+3
+332
+500
+1
+person 0.100 80 281 268 364
+
+# 43
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001423.jpg
+3
+333
+500
+1
+person 0.100 56 124 333 382
+
+# 44
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001430.jpg
+3
+375
+500
+3
+person 0.100 154 100 286 235
+person 0.100 146 211 352 303
+person 0.100 154 245 374 398
+
+# 45
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001526.jpg
+3
+298
+500
+5
+person 0.100 18 3 298 114
+person 0.100 51 109 297 214
+person 0.100 35 212 297 316
+person 0.100 33 289 297 387
+person 0.100 15 381 297 500
+
+# 46
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001558.jpg
+3
+375
+500
+2
+person 0.100 56 1 329 286
+person 0.100 15 283 328 500
+
+# 47
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001583.jpg
+3
+375
+500
+2
+person 0.100 45 312 282 412
+person 0.100 16 70 375 232
+
+# 48
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001585.jpg
+3
+434
+500
+1
+person 0.100 115 197 358 328
+
+# 49
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001586.jpg
+3
+398
+480
+1
+person 0.100 40 211 237 331
+
+# 50
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001587.jpg
+3
+375
+500
+1
+bicycle 0.100 249 204 325 274
+
+# 51
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001594.jpg
+3
+333
+500
+1
+person 0.100 93 335 218 400
+
+# 52
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001595.jpg
+3
+375
+500
+2
+bus 0.100 162 268 296 442
+bus 0.100 158 40 288 275
+
+# 53
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001627.jpg
+3
+500
+375
+1
+person 0.100 7 104 475 280
+
+# 54
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001630.jpg
+3
+500
+375
+7
+person 0.100 14 26 114 54
+person 0.100 27 190 214 268
+person 0.100 95 74 358 200
+person 0.100 196 155 500 343
+person 0.100 32 333 255 373
+bicycle 0.100 231 85 428 200
+bicycle 0.100 358 149 500 340
+
+# 55
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001667.jpg
+3
+333
+500
+1
+person 0.100 115 251 217 298
+
+# 56
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001678.jpg
+3
+333
+500
+2
+person 0.100 192 107 333 256
+person 0.100 62 119 110 157
+
+# 57
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001686.jpg
+3
+500
+375
+1
+person 0.100 168 112 500 206
+
+# 58
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001709.jpg
+3
+333
+500
+3
+person 0.100 132 367 287 426
+person 0.100 1 1 333 202
+motorbike 0.100 45 1 333 412
+
+# 59
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001717.jpg
+3
+404
+500
+2
+person 0.100 160 371 404 476
+person 0.100 99 227 404 365
+
+# 60
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001857.jpg
+3
+375
+500
+7
+car 0.100 11 1 374 500
+person 0.100 1 397 127 479
+person 0.100 1 328 122 413
+person 0.100 1 226 117 327
+person 0.100 3 168 104 236
+person 0.100 1 86 45 145
+person 0.100 32 132 67 173
+
+# 61
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_001884.jpg
+3
+375
+500
+3
+bus 0.100 217 189 245 201
+bus 0.100 216 200 251 311
+bus 0.100 213 309 245 416
+
+# 62
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002024.jpg
+3
+375
+500
+4
+bus 0.100 124 337 273 500
+bus 0.100 88 104 301 343
+bus 0.100 109 1 297 71
+person 0.100 160 174 199 207
+
+# 63
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002055.jpg
+3
+375
+500
+1
+person 0.100 146 64 375 229
+
+# 64
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002079.jpg
+3
+375
+500
+2
+person 0.100 37 210 374 327
+person 0.100 79 313 372 433
+
+# 65
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002105.jpg
+3
+375
+500
+2
+motorbike 0.100 96 169 276 407
+person 0.100 99 237 240 358
+
+# 66
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002119.jpg
+3
+375
+500
+5
+person 0.100 65 155 332 256
+person 0.100 36 85 368 164
+person 0.100 2 30 375 143
+person 0.100 117 6 153 31
+person 0.100 138 2 271 44
+
+# 67
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002120.jpg
+3
+335
+500
+1
+person 0.100 24 64 334 496
+
+# 68
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002142.jpg
+3
+333
+500
+3
+person 0.100 86 178 333 316
+person 0.100 71 292 333 409
+person 0.100 130 5 218 62
+
+# 69
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002216.jpg
+3
+340
+500
+2
+bus 0.100 110 360 313 500
+bus 0.100 104 65 319 396
+
+# 70
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002227.jpg
+3
+333
+500
+1
+bicycle 0.100 20 33 330 450
+
+# 71
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002260.jpg
+3
+330
+500
+1
+motorbike 0.100 61 107 287 447
+
+# 72
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002262.jpg
+3
+333
+500
+1
+person 0.100 36 93 333 467
+
+# 73
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002273.jpg
+3
+212
+320
+1
+person 0.100 14 121 118 186
+
+# 74
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002281.jpg
+3
+238
+500
+2
+car 0.100 30 1 213 387
+person 0.100 54 189 96 214
+
+# 75
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002293.jpg
+3
+500
+332
+2
+person 0.100 47 2 500 264
+person 0.100 131 87 500 287
+
+# 76
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002344.jpg
+3
+500
+333
+1
+person 0.100 44 3 500 333
+
+# 77
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002361.jpg
+3
+500
+375
+1
+person 0.100 296 294 500 375
+
+# 78
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002370.jpg
+3
+375
+500
+4
+person 0.100 190 454 210 465
+person 0.100 189 461 209 474
+car 0.100 189 395 208 432
+car 0.100 174 355 213 391
+
+# 79
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002378.jpg
+3
+375
+500
+1
+person 0.100 10 184 305 384
+
+# 80
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002387.jpg
+3
+375
+500
+3
+person 0.100 153 220 252 250
+person 0.100 128 194 166 214
+person 0.100 130 160 167 188
+
+# 81
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002403.jpg
+3
+375
+500
+1
+person 0.100 114 316 160 334
+
+# 82
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002426.jpg
+3
+375
+500
+1
+person 0.100 34 95 285 493
+
+# 83
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002488.jpg
+3
+500
+375
+2
+person 0.100 75 110 443 281
+motorbike 0.100 226 11 500 375
+
+# 84
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002539.jpg
+3
+333
+500
+2
+bus 0.100 1 1 333 500
+person 0.100 105 198 333 307
+
+# 85
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002545.jpg
+3
+500
+375
+1
+person 0.100 43 75 496 206
+
+# 86
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002565.jpg
+3
+375
+500
+1
+person 0.100 175 258 336 334
+
+# 87
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002611.jpg
+3
+375
+500
+1
+person 0.100 1 1 351 397
+
+# 88
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002624.jpg
+3
+375
+500
+2
+person 0.100 142 109 375 281
+person 0.100 150 254 256 360
+
+# 89
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002639.jpg
+3
+375
+500
+3
+person 0.100 158 345 284 402
+person 0.100 141 240 301 307
+person 0.100 156 185 301 242
+
+# 90
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002643.jpg
+3
+375
+500
+4
+car 0.100 51 1 152 89
+person 0.100 57 407 174 453
+person 0.100 102 180 207 281
+motorbike 0.100 133 181 282 302
+
+# 91
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002668.jpg
+3
+375
+500
+4
+person 0.100 102 320 319 500
+person 0.100 105 426 134 462
+person 0.100 83 95 319 309
+person 0.100 169 89 190 112
+
+# 92
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002669.jpg
+3
+375
+500
+1
+person 0.100 241 442 294 478
+
+# 93
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002719.jpg
+3
+374
+500
+4
+person 0.100 130 158 168 188
+person 0.100 108 183 136 206
+person 0.100 107 144 132 167
+person 0.100 126 87 150 122
+
+# 94
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002728.jpg
+3
+334
+500
+2
+person 0.100 1 333 332 500
+person 0.100 1 1 334 223
+
+# 95
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002789.jpg
+3
+314
+500
+5
+person 0.100 128 376 222 427
+car 0.100 174 459 184 485
+car 0.100 175 376 182 402
+car 0.100 173 314 184 337
+car 0.100 173 239 182 259
+
+# 96
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002823.jpg
+3
+375
+500
+2
+motorbike 0.100 227 93 375 448
+person 0.100 149 213 344 327
+
+# 97
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002824.jpg
+3
+431
+500
+1
+person 0.100 13 1 431 500
+
+# 98
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002895.jpg
+3
+375
+500
+2
+person 0.100 194 388 339 419
+person 0.100 192 415 338 447
+
+# 99
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002914.jpg
+3
+375
+500
+1
+person 0.100 13 287 374 500
+
+# 100
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_002954.jpg
+3
+375
+500
+2
+person 0.100 22 118 292 200
+person 0.100 166 351 375 461
+
+# 101
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003020.jpg
+3
+375
+500
+4
+person 0.100 122 72 375 172
+person 0.100 117 171 375 281
+person 0.100 142 256 352 337
+person 0.100 130 330 342 405
+
+# 102
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003022.jpg
+3
+333
+500
+1
+person 0.100 51 241 181 299
+
+# 103
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003051.jpg
+3
+333
+500
+1
+car 0.100 82 30 207 283
+
+# 104
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003088.jpg
+3
+375
+500
+2
+person 0.100 65 69 375 330
+person 0.100 91 209 211 286
+
+# 105
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003091.jpg
+3
+500
+333
+2
+person 0.100 168 35 495 270
+person 0.100 2 43 458 333
+
+# 106
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003101.jpg
+3
+333
+500
+4
+bus 0.100 1 292 253 500
+bus 0.100 59 197 209 263
+bus 0.100 2 1 295 211
+car 0.100 170 257 188 289
+
+# 107
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003104.jpg
+3
+375
+500
+1
+person 0.100 71 64 368 161
+
+# 108
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003106.jpg
+3
+375
+500
+1
+person 0.100 15 185 374 401
+
+# 109
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003118.jpg
+3
+333
+500
+2
+person 0.100 73 125 333 391
+person 0.100 206 362 333 472
+
+# 110
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003134.jpg
+3
+366
+500
+3
+person 0.100 86 64 317 184
+person 0.100 72 160 284 300
+person 0.100 1 270 366 483
+
+# 111
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003137.jpg
+3
+375
+500
+1
+bus 0.100 45 1 310 406
+
+# 112
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003143.jpg
+3
+292
+500
+1
+car 0.100 72 33 254 482
+
+# 113
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003188.jpg
+3
+375
+500
+2
+bicycle 0.100 125 54 375 320
+person 0.100 4 257 375 435
+
+# 114
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003189.jpg
+3
+500
+458
+1
+person 0.100 54 163 284 289
+
+# 115
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003191.jpg
+3
+333
+500
+1
+person 0.100 1 3 333 351
+
+# 116
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003195.jpg
+3
+333
+500
+2
+bus 0.100 149 167 276 321
+car 0.100 227 327 269 474
+
+# 117
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003205.jpg
+3
+500
+333
+1
+person 0.100 76 28 376 306
+
+# 118
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003226.jpg
+3
+500
+333
+1
+person 0.100 43 71 485 286
+
+# 119
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003329.jpg
+3
+500
+332
+1
+person 0.100 15 11 495 284
+
+# 120
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003367.jpg
+3
+375
+500
+3
+person 0.100 174 1 253 38
+person 0.100 200 3 316 22
+motorbike 0.100 213 15 302 111
+
+# 121
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003373.jpg
+3
+375
+500
+1
+person 0.100 1 176 196 330
+
+# 122
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003431.jpg
+3
+500
+375
+1
+person 0.100 15 11 500 373
+
+# 123
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003503.jpg
+3
+334
+500
+5
+car 0.100 191 456 237 500
+car 0.100 187 1 244 106
+bus 0.100 76 102 272 378
+person 0.100 200 1 321 35
+person 0.100 183 16 281 58
+
+# 124
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003529.jpg
+3
+333
+500
+1
+person 0.100 45 94 305 334
+
+# 125
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003530.jpg
+3
+375
+500
+1
+person 0.100 117 6 375 376
+
+# 126
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003541.jpg
+3
+500
+375
+2
+person 0.100 18 195 500 335
+person 0.100 72 34 500 222
+
+# 127
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003580.jpg
+3
+500
+398
+1
+person 0.100 6 1 500 352
+
+# 128
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003581.jpg
+3
+375
+500
+3
+person 0.100 24 2 375 265
+person 0.100 30 305 375 498
+person 0.100 1 274 69 321
+
+# 129
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003587.jpg
+3
+361
+500
+1
+car 0.100 171 1 191 58
+
+# 130
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003611.jpg
+3
+375
+500
+1
+person 0.100 271 217 307 237
+
+# 131
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003621.jpg
+3
+343
+500
+4
+bicycle 0.100 153 199 271 328
+person 0.100 72 249 224 334
+bus 0.100 62 441 120 492
+bus 0.100 62 295 109 382
+
+# 132
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003659.jpg
+3
+375
+500
+1
+person 0.100 128 168 240 228
+
+# 133
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003711.jpg
+3
+396
+500
+8
+car 0.100 278 132 329 166
+bus 0.100 86 162 344 469
+person 0.100 129 269 156 294
+person 0.100 128 228 154 248
+person 0.100 127 200 154 225
+person 0.100 173 340 209 352
+person 0.100 177 352 210 367
+person 0.100 177 366 212 380
+
+# 134
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003715.jpg
+3
+375
+500
+1
+bus 0.100 62 44 355 476
+
+# 135
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003742.jpg
+3
+320
+240
+1
+person 0.100 24 2 236 181
+
+# 136
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003745.jpg
+3
+480
+450
+1
+person 0.100 37 71 465 251
+
+# 137
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003747.jpg
+3
+500
+417
+1
+person 0.100 10 40 316 270
+
+# 138
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003786.jpg
+3
+281
+500
+1
+bus 0.100 165 171 273 287
+
+# 139
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003815.jpg
+3
+333
+500
+5
+car 0.100 108 188 213 433
+person 0.100 1 231 54 259
+person 0.100 1 186 54 219
+person 0.100 11 242 95 274
+person 0.100 125 288 149 333
+
+# 140
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003831.jpg
+3
+375
+500
+2
+person 0.100 18 48 359 249
+person 0.100 82 182 332 321
+
+# 141
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003889.jpg
+3
+318
+480
+4
+person 0.100 32 337 193 439
+person 0.100 35 122 188 239
+person 0.100 58 1 308 102
+person 0.100 48 51 196 123
+
+# 142
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003910.jpg
+3
+375
+500
+1
+person 0.100 122 161 220 274
+
+# 143
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_003917.jpg
+3
+375
+500
+1
+car 0.100 1 121 216 500
+
+# 144
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004000.jpg
+3
+500
+389
+2
+person 0.100 40 192 464 331
+person 0.100 23 61 494 198
+
+# 145
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004003.jpg
+3
+375
+500
+1
+motorbike 0.100 50 45 315 472
+
+# 146
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004033.jpg
+3
+342
+500
+4
+person 0.100 7 70 138 120
+motorbike 0.100 36 120 168 217
+motorbike 0.100 2 183 196 326
+motorbike 0.100 1 189 280 447
+
+# 147
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004049.jpg
+3
+500
+469
+2
+person 0.100 2 2 499 331
+person 0.100 4 79 499 469
+
+# 148
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004065.jpg
+3
+375
+500
+4
+bus 0.100 85 26 298 426
+person 0.100 188 452 245 475
+person 0.100 193 5 241 26
+person 0.100 167 341 201 367
+
+# 149
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004092.jpg
+3
+375
+500
+1
+person 0.100 102 73 374 430
+
+# 150
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004112.jpg
+3
+375
+500
+1
+person 0.100 22 71 375 500
+
+# 151
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004121.jpg
+3
+332
+500
+2
+person 0.100 92 220 242 347
+person 0.100 142 164 219 227
+
+# 152
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004133.jpg
+3
+334
+500
+1
+person 0.100 18 97 334 224
+
+# 153
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004197.jpg
+3
+334
+500
+1
+person 0.100 21 246 334 485
+
+# 154
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004238.jpg
+3
+357
+500
+3
+person 0.100 105 10 357 112
+person 0.100 112 228 357 341
+person 0.100 24 314 357 483
+
+# 155
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004265.jpg
+3
+375
+500
+1
+person 0.100 139 253 276 402
+
+# 156
+/Users/cusgadmin/smartCams/Wksp/smartCams/VOC2012/JPEGImages/2007_004275.jpg
+3
+500
+375
+2
+motorbike 0.100 171 93 500 375
+person 0.100 45 127 248 255
+
+# 157
+/Users/cusga

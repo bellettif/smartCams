@@ -13,13 +13,12 @@ import xml.etree.ElementTree as ET
 import cv2
 import numpy as np
 
-MAX_N_IMAGES = np.inf
 TEST_PROBA   = 0.1  # Put that proportion of images into the test set, the rest into the learning set
 IMAGE_WIDTH  = 227  # Width of the warped images
 IMAGE_HEIGHT = 227  # Height of the warped images
 CAFFE_ROOT   = '/users/cusgadmin/caffe'
 
-data_set_suffix = 'all'
+data_set_suffix = 'small'
 
 main_dir            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
 image_set_folder    = main_dir + 'VOC2012/ImageSets/Main/'
@@ -101,14 +100,21 @@ for annotation in annotation_list:
     #
     pict = cv2.imread(image_path)
     for bbx in bbxes:
+        sub_image = pict[bbx['ymin']:bbx['ymax'], bbx['xmin']:bbx['xmax']].copy()
+        sub_image = cv2.resize(sub_image, (IMAGE_HEIGHT, IMAGE_WIDTH))
         #
-        output_path = output_cropped + ('pict_%d.jpg' % iidx)
-        if np.random.uniform() > (1.0 - TEST_PROBA):
-            crop_outputfile_test.write(output_path + ' ' + str(num_labels[bbx['name']]) + '\n')
-        else:
-            crop_outputfile_train.write(output_path + ' ' + str(num_labels[bbx['name']]) + '\n')    
+        mean_image += sub_image
+        #
         iidx += 1
-        if iidx > MAX_N_IMAGES:
-            break
-    if iidx > MAX_N_IMAGES:
-        break
+
+mean_image /= float(iidx)
+mean_image = mean_image.astype(np.uint8)
+#
+#    Write mean image to file
+#
+cv2.imwrite('mean_image_%s.jpg' % data_set_suffix, mean_image)
+
+#
+#    Convert jpeg file to binary proto so it can be used by caffe model
+#
+#os.system('%s/build/tools/convert_to_protobi.bin mean_image_%s.jpg mean_image_%s.binaryproto' % (CAFFE_ROOT, data_set_suffix, data_set_suffix))
