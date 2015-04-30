@@ -7,6 +7,9 @@ layer {
   include {
     phase: TRAIN
   }
+  transform_param {
+    mean_file:"Warped_data/pict_24.jpg"
+  }
   image_data_param {
     source: "VOC_cropped_warped_train.txt"
     batch_size: 128

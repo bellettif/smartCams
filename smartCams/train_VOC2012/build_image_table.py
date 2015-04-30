@@ -3,6 +3,7 @@ Created on Apr 27, 2015
 
     Consolidate the VOC image set around cars, persons and bicycles
     Extract cropped and warped windows from the dataset so as to use the Pascal VOC network
+    Builds the mean image of the data set
 
 @author: Francois Belletti
 '''
@@ -11,15 +12,18 @@ import os
 import xml.etree.ElementTree as ET
 import cv2
 import numpy as np
-import caffe
+import caffe.io
 
 MAX_N_IMAGES = 1e3
+TEST_PROBA   = 0.1  # Put that proportion of images into the test set, the rest into the learning set
+IMAGE_WIDTH  = 227  # Width of the warped images
+IMAGE_HEIGHT = 227  # Height of the warped images
 
 main_dir            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
 image_set_folder    = main_dir + 'VOC2012/ImageSets/Main/'
 jpeg_folder         = main_dir + 'VOC2012/JPEGImages/'
 annotation_folder   = main_dir + 'VOC2012/Annotations/'
-output_cropped      = 'Warped_data_small/'
+output_cropped      = 'warped_data_small/'
 
 all_sets = os.listdir(image_set_folder)
 
@@ -73,7 +77,7 @@ crop_outputfile_test = open('VOC_cropped_warped_test_small.txt', 'wb')
 
 idx = 0
 iidx = 0
-mean_image = np.zeros((227, 227, 3), dtype = np.double)
+mean_image = np.zeros((IMAGE_HEIGHT, IMAGE_WIDTH, 3), dtype = np.double)
 #
 for annotation in annotation_list:
     file_path = annotation_folder + annotation
@@ -96,12 +100,12 @@ for annotation in annotation_list:
     pict = cv2.imread(image_path)
     for bbx in bbxes:
         sub_image = pict[bbx['ymin']:bbx['ymax'], bbx['xmin']:bbx['xmax']].copy()
-        sub_image = cv2.resize(sub_image, (227, 227))
+        sub_image = cv2.resize(sub_image, (IMAGE_HEIGHT, IMAGE_WIDTH))
         #
         mean_image += sub_image
         #
         output_path = output_cropped + ('pict_%d.jpg' % iidx)
-        if np.random.uniform() > 0.9:
+        if np.random.uniform() > (1.0 - TEST_PROBA):
             crop_outputfile_test.write(output_path + ' ' + str(num_labels[bbx['name']]) + '\n')
         else:
             crop_outputfile_train.write(output_path + ' ' + str(num_labels[bbx['name']]) + '\n')
@@ -114,5 +118,12 @@ for annotation in annotation_list:
 
 mean_image /= float(iidx)
 mean_image = mean_image.astype(np.uint8)
+#
+#    Write mean image to file
+#
+cv2.imwrite('mean_image.jpg', mean_image)
 
-cv2.imwrite(output_cropped + 'mean_image.jpg', mean_image)
+#
+#    Convert jpeg file to binary proto so it can be used by caffe model
+#
+os.system('./compute_image_mean.bin mean_image.jpg mean_image.binaryproto')
