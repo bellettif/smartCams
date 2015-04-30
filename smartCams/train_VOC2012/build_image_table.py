@@ -14,16 +14,19 @@ import cv2
 import numpy as np
 import caffe.io
 
-MAX_N_IMAGES = np.inf
+MAX_N_IMAGES = 1e3
 TEST_PROBA   = 0.1  # Put that proportion of images into the test set, the rest into the learning set
 IMAGE_WIDTH  = 227  # Width of the warped images
 IMAGE_HEIGHT = 227  # Height of the warped images
+CAFFE_ROOT   = '/users/cusgadmin/caffe'
+
+data_set_suffix = 'small'
 
 main_dir            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
 image_set_folder    = main_dir + 'VOC2012/ImageSets/Main/'
 jpeg_folder         = main_dir + 'VOC2012/JPEGImages/'
 annotation_folder   = main_dir + 'VOC2012/Annotations/'
-output_cropped      = 'warped_data_small/'
+output_cropped      = 'warped_data_%s/' % data_set_suffix
 
 all_sets = os.listdir(image_set_folder)
 
@@ -72,8 +75,8 @@ def filter_file_list(file_list, extension = '.xml'):
 annotation_list = filter_file_list(os.listdir(annotation_folder))
 
 output_file = open('VOC_windows.txt', 'wb')
-crop_outputfile_train = open('VOC_cropped_warped_train.txt', 'wb')
-crop_outputfile_test = open('VOC_cropped_warped_test.txt', 'wb')
+crop_outputfile_train = open('VOC_cropped_warped_train_%s.txt' % data_set_suffix, 'wb')
+crop_outputfile_test = open('VOC_cropped_warped_test_%s.txt' % data_set_suffix, 'wb')
 
 idx = 0
 iidx = 0
@@ -121,9 +124,9 @@ mean_image = mean_image.astype(np.uint8)
 #
 #    Write mean image to file
 #
-cv2.imwrite('mean_image.jpg', mean_image)
+cv2.imwrite('mean_image_%s.jpg' % data_set_suffix, mean_image)
 
 #
 #    Convert jpeg file to binary proto so it can be used by caffe model
 #
-os.system('./convert_to_protobi.bin mean_image.jpg mean_image.binaryproto')
+os.system('%s/build/tools/convert_to_protobi.bin mean_image_%s.jpg mean_image_%s.binaryproto' % (CAFFE_ROOT, data_set_suffix, data_set_suffix))
