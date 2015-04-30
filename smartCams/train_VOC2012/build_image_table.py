@@ -14,7 +14,7 @@ import cv2
 import numpy as np
 import caffe.io
 
-MAX_N_IMAGES = 1e3
+MAX_N_IMAGES = np.inf
 TEST_PROBA   = 0.1  # Put that proportion of images into the test set, the rest into the learning set
 IMAGE_WIDTH  = 227  # Width of the warped images
 IMAGE_HEIGHT = 227  # Height of the warped images
@@ -71,9 +71,9 @@ def filter_file_list(file_list, extension = '.xml'):
 
 annotation_list = filter_file_list(os.listdir(annotation_folder))
 
-output_file = open('VOC_windows_small.txt', 'wb')
-crop_outputfile_train = open('VOC_cropped_warped_train_small.txt', 'wb')
-crop_outputfile_test = open('VOC_cropped_warped_test_small.txt', 'wb')
+output_file = open('VOC_windows.txt', 'wb')
+crop_outputfile_train = open('VOC_cropped_warped_train.txt', 'wb')
+crop_outputfile_test = open('VOC_cropped_warped_test.txt', 'wb')
 
 idx = 0
 iidx = 0
