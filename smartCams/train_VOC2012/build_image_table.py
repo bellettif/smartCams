@@ -126,4 +126,4 @@ cv2.imwrite('mean_image.jpg', mean_image)
 #
 #    Convert jpeg file to binary proto so it can be used by caffe model
 #
-os.system('./compute_image_mean.bin mean_image.jpg mean_image.binaryproto')
+os.system('./convert_to_protobi.bin mean_image.jpg mean_image.binaryproto')
