@@ -12,16 +12,20 @@ import os
 import xml.etree.ElementTree as ET
 import cv2
 import numpy as np
+#import sys
+#sys.path.insert(0, '/Users/alvinyuan/Documents/Vision/caffe/python')
+import caffe.io
 
 MAX_N_IMAGES = 1e3
 TEST_PROBA   = 0.1  # Put that proportion of images into the test set, the rest into the learning set
 IMAGE_WIDTH  = 227  # Width of the warped images
 IMAGE_HEIGHT = 227  # Height of the warped images
-CAFFE_ROOT   = '/users/cusgadmin/caffe'
+CAFFE_ROOT   = '/Users/alvinyuan/Documents/Vision/caffe'
 
 data_set_suffix = 'small'
 
 main_dir            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
+#main_dir            = '/Users/alvinyuan/Documents/Vision/smartCams/'
 image_set_folder    = main_dir + 'VOC2012/ImageSets/Main/'
 jpeg_folder         = main_dir + 'VOC2012/JPEGImages/'
 annotation_folder   = main_dir + 'VOC2012/Annotations/'
