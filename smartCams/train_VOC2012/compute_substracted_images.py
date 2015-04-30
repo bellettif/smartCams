@@ -12,24 +12,21 @@ import os
 import xml.etree.ElementTree as ET
 import cv2
 import numpy as np
-#import sys
-#sys.path.insert(0, '/Users/alvinyuan/Documents/Vision/caffe/python')
-import caffe.io
 
-MAX_N_IMAGES = np.inf
 TEST_PROBA   = 0.1  # Put that proportion of images into the test set, the rest into the learning set
 IMAGE_WIDTH  = 227  # Width of the warped images
 IMAGE_HEIGHT = 227  # Height of the warped images
-CAFFE_ROOT   = '/Users/alvinyuan/Documents/Vision/caffe'
+MAX_N_IMAGES = 1e3
 
-data_set_suffix = 'all'
+data_set_suffix = 'small'
 
 main_dir            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
-#main_dir            = '/Users/alvinyuan/Documents/Vision/smartCams/'
 image_set_folder    = main_dir + 'VOC2012/ImageSets/Main/'
 jpeg_folder         = main_dir + 'VOC2012/JPEGImages/'
 annotation_folder   = main_dir + 'VOC2012/Annotations/'
 output_cropped      = '../warped_data/'
+
+mean_image = cv2.imread('mean_image_%s.jpg' % data_set_suffix)
 
 all_sets = os.listdir(image_set_folder)
 
@@ -105,12 +102,16 @@ for annotation in annotation_list:
     #
     pict = cv2.imread(image_path)
     for bbx in bbxes:
+        sub_image = pict[bbx['ymin']:bbx['ymax'], bbx['xmin']:bbx['xmax']].copy()
+        sub_image = cv2.resize(sub_image, (IMAGE_HEIGHT, IMAGE_WIDTH))
+        sub_image -= mean_image
         #
         output_path = output_cropped + ('pict_%d.jpg' % iidx)
         if np.random.uniform() > (1.0 - TEST_PROBA):
             crop_outputfile_test.write(output_path + ' ' + str(num_labels[bbx['name']]) + '\n')
         else:
-            crop_outputfile_train.write(output_path + ' ' + str(num_labels[bbx['name']]) + '\n')    
+            crop_outputfile_train.write(output_path + ' ' + str(num_labels[bbx['name']]) + '\n')
+        cv2.imwrite('../finetuning/warped_data/' + ('pict_%d.jpg' % iidx), sub_image)
         iidx += 1
         if iidx > MAX_N_IMAGES:
             break

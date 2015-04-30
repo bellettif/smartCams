@@ -1,9 +1,10 @@
-name: "R-CNN-ilsvrc13"
+# Fully convolutional network version of CaffeNet.
+name: "CaffeNetConv"
 input: "data"
 input_dim: 1
 input_dim: 3
-input_dim: 227
-input_dim: 227
+input_dim: 451
+input_dim: 451
 layer {
   name: "conv1"
   type: "Convolution"
@@ -148,60 +149,68 @@ layer {
   }
 }
 layer {
-  name: "fc6"
-  type: "InnerProduct"
+  name: "fc6-conv"
+  type: "Convolution"
   bottom: "pool5"
-  top: "fc6"
-  inner_product_param {
+  top: "fc6-conv"
+  convolution_param {
     num_output: 4096
+    kernel_size: 6
   }
 }
 layer {
   name: "relu6"
   type: "ReLU"
-  bottom: "fc6"
-  top: "fc6"
+  bottom: "fc6-conv"
+  top: "fc6-conv"
 }
 layer {
   name: "drop6"
   type: "Dropout"
-  bottom: "fc6"
-  top: "fc6"
+  bottom: "fc6-conv"
+  top: "fc6-conv"
   dropout_param {
     dropout_ratio: 0.5
   }
 }
 layer {
-  name: "fc7"
-  type: "InnerProduct"
-  bottom: "fc6"
-  top: "fc7"
-  inner_product_param {
+  name: "fc7-conv"
+  type: "Convolution"
+  bottom: "fc6-conv"
+  top: "fc7-conv"
+  convolution_param {
     num_output: 4096
+    kernel_size: 1
   }
 }
 layer {
   name: "relu7"
   type: "ReLU"
-  bottom: "fc7"
-  top: "fc7"
+  bottom: "fc7-conv"
+  top: "fc7-conv"
 }
 layer {
   name: "drop7"
   type: "Dropout"
-  bottom: "fc7"
-  top: "fc7"
+  bottom: "fc7-conv"
+  top: "fc7-conv"
   dropout_param {
     dropout_ratio: 0.5
   }
 }
-# R-CNN classification layer made from R-CNN ILSVRC13 SVMs.
 layer {
-  name: "fc-rcnn"
-  type: "InnerProduct"
-  bottom: "fc7"
-  top: "fc-rcnn"
-  inner_product_param {
-    num_output: 200
+  name: "fc8-conv"
+  type: "Convolution"
+  bottom: "fc7-conv"
+  top: "fc8-conv"
+  convolution_param {
+    num_output: 1000
+    kernel_size: 1
   }
+}
+layer {
+  name: "prob"
+  type: "Softmax"
+  bottom: "fc8-conv"
+  top: "prob"
 }
