@@ -1,1 +1,0 @@
-Run compute_mean_image.py prior to running compute_substracted_images.py

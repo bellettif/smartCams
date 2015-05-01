@@ -17,6 +17,8 @@ import cv2
 import numpy as np
 import cPickle as pickle
 
+from back_ground import generate_background
+
 #
 #
 #
@@ -24,14 +26,19 @@ TEST_PROBA      = 0.1  # Put that proportion of images into the test set, the re
 IMAGE_WIDTH     = 227  # Width of the warped images
 IMAGE_HEIGHT    = 227  # Height of the warped images
 CAFFE_ROOT      = '/users/cusgadmin/caffe'
-TARGET_LABELS   = ['person', 'bicycle', 'bus', 'car', 'motorbike'] # These elements only will be extracted
+TARGET_LABELS   = ['background', 'person', 'bicycle', 'bus', 'car', 'motorbike'] # These elements only will be extracted
 #
 #    Setup path to images and annotations (annotations contain labels and bounding boxes in xml format)
 #
 MAIN_DIR            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
 INPUT_IMAGES        = MAIN_DIR + 'VOC2012/JPEGImages/'
 ANNOTATIONS         = MAIN_DIR + 'VOC2012/Annotations/'
+BACK_GROUND_JPG     = MAIN_DIR + 'background/images/'
+BACK_GROUND_AN      = MAIN_DIR + 'background/annotation/n04335209/'
 OUTPUT_FOLDER       = '../image_dump/'
+N_BACK_PER_IMAGE    = 100
+MIN_BACK_HEIGHT     = 40
+MIN_BACK_WIDTH      = 40
 #
 
 #
@@ -78,15 +85,17 @@ file_list_train         =   open(OUTPUT_FOLDER + 'train_list.txt', 'wb')
 file_list_test          =   open(OUTPUT_FOLDER + 'test_list.txt', 'wb')
 file_list_train_test    =   open(OUTPUT_FOLDER + 'train_test_list.txt', 'wb')
 #
-#    Prepare computation of mean image
+#    Prepare folder structure
 #
-n_selected = 0
-mean_image = np.zeros((IMAGE_HEIGHT, IMAGE_WIDTH, 3), dtype = np.double)
+if 'cropped' not in os.listdir(OUTPUT_FOLDER):
+    os.mkdir(OUTPUT_FOLDER + 'cropped')
 #
 #    First pass on the dataset without mean substraction
 #
-print 'First pass of dataset'
+print 'Passing on data set of objects'
 #
+n_selected = 0
+
 for i, annotation in enumerate(annotation_list):
     file_path = ANNOTATIONS + annotation
     size, bbxes = extract_bbxes(file_path)
@@ -115,11 +124,52 @@ for i, annotation in enumerate(annotation_list):
         #    Compute cropped image
         sub_image = pict[bbx['ymin']:bbx['ymax'], bbx['xmin']:bbx['xmax']].copy()   # Crop
         sub_image = cv2.resize(sub_image, (IMAGE_HEIGHT, IMAGE_WIDTH))              # Warp
+        #
         cv2.imwrite(output_path, sub_image)
-        #    Update mean
-        mean_image += sub_image.astype(np.double)
         #
         n_selected += 1
+
+print n_selected
+print 'Passing on data set of background picts'
+#
+annotation_list = filter_file_list(os.listdir(BACK_GROUND_AN))
+#
+print len(annotation_list)
+for i, annotation in enumerate(annotation_list):
+    file_path = BACK_GROUND_AN + annotation
+    size, bbxes = extract_bbxes(file_path)
+    if len(bbxes) == 0:
+        continue
+    #    Load image to crop it
+    image_path = BACK_GROUND_JPG + annotation[:-4] + '.JPEG'
+    #
+    pict = cv2.imread(image_path)
+    #
+    if i % 100 == 0:
+        print 'Proccessing annotation %d out of %d' % (i, len(annotation_list))
+    #
+    for ii in range(N_BACK_PER_IMAGE):
+        # Try and extract background
+        back_ground = generate_background(pict, bbxes, MIN_BACK_HEIGHT, MIN_BACK_WIDTH)
+        if back_ground is not None:
+            output_path = OUTPUT_FOLDER + ('cropped/pict_%d.jpg' % n_selected)
+            #    Put filepath in list of files
+            if np.random.uniform() > (1.0 - TEST_PROBA):
+                file_list_test.write(output_path + ' ' + str(num_labels['background']) + '\n')
+            else:
+                file_list_train.write(output_path + ' ' + str(num_labels['background']) + '\n')
+            file_list_train_test.write(output_path + ' ' + str(num_labels['background']) + '\n')
+            #    Write background image to disk
+            #
+            back_ground = cv2.resize(back_ground, (IMAGE_HEIGHT, IMAGE_WIDTH))
+            cv2.imwrite(output_path, back_ground)
+            #
+            n_selected +=1
+            #
+        else:   # No background has been found
+            #print 'No background found'
+            continue
+print n_selected
 #
 #    Closing output
 #

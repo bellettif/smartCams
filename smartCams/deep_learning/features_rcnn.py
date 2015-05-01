@@ -44,10 +44,15 @@ def get_features(image_path):
     # Return 200 and 4096 features
     return out['fc-rcnn'], out['fc7']
 
+existing_feats_files = 0
 for i, image_name in enumerate(image_list):
+    rcnn_feats_filename = rcnn_feature_folder + image_name[:-4] + '.pi'
+    fc7_feats_filename = fc7_feature_folder + image_name[:-4] + '.pi'
+    #
     rcnn_feats, fc7_feats = get_features(image_folder + image_name)    
-    pickle.dump(rcnn_feats, open(rcnn_feature_folder + image_name[:-4] + '.pi', 'wb'))
-    pickle.dump(fc7_feats, open(fc7_feature_folder + image_name[:-4] + '.pi', 'wb'))
+    pickle.dump(rcnn_feats, open(rcnn_feats_filename, 'wb'))
+    pickle.dump(fc7_feats, open(fc7_feats_filename, 'wb'))
     if i % 100 == 0:
         print 'Featurized image %d out of %d' % (i, len(image_list))
 
+print existing_feats_files, 'feature files already existed.'
