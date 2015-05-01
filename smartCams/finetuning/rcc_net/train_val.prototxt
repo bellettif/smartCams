@@ -10,10 +10,12 @@ layer {
   transform_param {
     mirror: true
     crop_size: 227
-#mean_file: "../warped_data/mean_image_all.binaryproto"
+    mean_value: 104
+    mean_value: 117
+    mean_value: 123
   }
   image_data_param {
-    source: "../VOC_cropped_warped_train_small.txt"
+    source: "../train_list.txt"
     batch_size: 64
   }
 }
@@ -28,10 +30,12 @@ layer {
   transform_param {
     mirror: false
     crop_size: 227
-#mean_file: "../warped_data/mean_image_all.binaryproto"
+    mean_value: 104
+    mean_value: 117
+    mean_value: 123
   }
   image_data_param {
-    source: "../VOC_cropped_warped_test_small.txt"
+    source: "../test_list.txt"
     batch_size: 64
   }
 }

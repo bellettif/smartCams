@@ -1,7 +1,7 @@
 '''
 Created on Apr 23, 2015
 
-    Bounding boxes and ellipses
+    Bounding boxes and ellipses from extracted video images
 
 @author: Francois
 '''
