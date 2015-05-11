@@ -7,15 +7,15 @@ Created on May 1, 2015
 import os
 import numpy as np
 from matplotlib import pyplot as plt
-import caffe
 import cPickle as pickle
 from sklearn import *
+import caffe
 
 from hybrid import Hybrid_classifier
 
-HYBRID = False
+HYBRID = True
 
-lookup_table    = '../image_dump/label_lookup_table.pi'
+lookup_table            = '../image_dump/label_lookup_table.pi'
 image_folder            = '../image_dump/cropped/'
 rcnn_feature_folder     = '../VOC2012/rcnn_features/' 
 fc7_feature_folder      = '../VOC2012/fc7_features/'
@@ -25,11 +25,11 @@ fc7_feature_folder      = '../VOC2012/fc7_features/'
 #
 if HYBRID:
     model_file      = 'rcnn_model/deploy.prototxt'
-    model_weights   = 'rcnn_model/bvlc_reference_rcnn_ilsvrc13.caffemodel'
-    head_path       = '../rcnn_features_ml/svm_fc7_no_bg_model'
+    model_weights   = '../finetuning/bvlc_reference_rcnn_ilsvrc13.caffemodel'
+    head_path       = '../rcnn_features_ml/svm_fc7_with_bg_model'
 else:
-    model_file      = '../finetuning/rcc_net/deploy_nn.prototxt'
-    model_weights   = '../finetuning/rcc_net/no_background/caffenet_train_iter_7000.caffemodel'
+    model_file      = '../finetuning/rcc_net/deploy_nn_background.prototxt'
+    model_weights   = '../finetuning/rcc_net/background/caffenet_train_background_iter_10000.caffemodel'
 
 if HYBRID:
     classifier = Hybrid_classifier(model_file,
@@ -40,17 +40,13 @@ else:
     classifier = Hybrid_classifier(model_file,
                                    model_weights,
                                    label_lookup = lookup_table)
-    
+
+
 image_list = filter(lambda x : x[-4:] == '.jpg', os.listdir(image_folder))
 
-example_image = caffe.io.load_image(image_folder + 'pict_1025.jpg')
-
-num_label = classifier.classify(example_image, target_feature = 'fc7')
-
-print num_label
-
-plt.title(num_label)
-plt.imshow(example_image)
-plt.show()
-
-
+for i in xrange(1000):
+    example_image = caffe.io.load_image(image_folder + np.random.choice(image_list))
+    num_label = classifier.classify(example_image, target_feature = 'fc7')
+    plt.title(classifier.lookup(num_label))
+    plt.imshow(example_image)
+    plt.show()

@@ -12,24 +12,30 @@ import os
 import cPickle as pickle
 from matplotlib import pyplot as plt
 
-MODEL_FILE = 'rcnn_model/deploy.prototxt'
-PRETRAINED = 'rcnn_model/bvlc_reference_rcnn_ilsvrc13.caffemodel'
+MODEL_FILE  = '../finetuning/rcc_net/deploy_nn_background.prototxt'
+WEIGHT_FILE = '../finetuning/rcc_net/background/caffenet_train_background_iter_10000.caffemodel'
 
 image_folder    = '../image_dump/cropped/'
-rcnn_feature_folder  = '../VOC2012/rcnn_features/' 
-fc7_feature_folder  = '../VOC2012/fc7_features/'
+rcnn_feature_folder  = '../VOC2012/rcnn_features_finetuned/' 
+fc7_feature_folder  = '../VOC2012/fc7_features_finetuned/'
+fc8_feature_folder = '../VOC2012/fc8_features_finetuned/'
+
+os.mkdir(rcnn_feature_folder)
+os.mkdir(fc7_feature_folder)
+os.mkdir(fc8_feature_folder)
 
 image_list = filter(lambda x : x[-4:] == '.jpg', os.listdir(image_folder))
 
 #
 #    Set up caffe classifier
 #
-caffe.set_mode_cpu()
+caffe.set_mode_gpu()
+
 #
 #    No need for mean image here, normalization has already been done
 #
-net = caffe.Net('rcnn_model_surgery/deploy.prototxt',
-                'rcnn_model_surgery/bvlc_reference_rcnn_ilsvrc13.caffemodel',
+net = caffe.Net(MODEL_FILE,
+                WEIGHT_FILE,
                 caffe.TEST)
 
 def get_features(image_path):
@@ -40,19 +46,18 @@ def get_features(image_path):
     transformer.set_channel_swap('data', (2,1,0))
     transformer.set_raw_scale('data', 255.0)
     # make classification map by forward and print prediction indices at each location
-    out = net.forward_all(['fc-rcnn', 'fc7'], data=np.asarray([transformer.preprocess('data', input_image)]))
-    # Return 200 and 4096 features
-    return out['fc-rcnn'], out['fc7']
+    out = net.forward_all(['fc8_VOC', 'fc7'], data=np.asarray([transformer.preprocess('data', input_image)]))
+    # Return 4096 and 6 features
+    return out['fc7'], out['output']
 
-existing_feats_files = 0
 for i, image_name in enumerate(image_list):
-    rcnn_feats_filename = rcnn_feature_folder + image_name[:-4] + '.pi'
-    fc7_feats_filename = fc7_feature_folder + image_name[:-4] + '.pi'
+    #rcnn_feats_filename     = rcnn_feature_folder + image_name[:-4] + '.pi'
+    fc7_feats_filename      = fc7_feature_folder + image_name[:-4] + '.pi'
+    fc8_feats_filename      = fc8_feature_folder + image_name[:-4] + '.pi'
     #
-    rcnn_feats, fc7_feats = get_features(image_folder + image_name)    
-    pickle.dump(rcnn_feats, open(rcnn_feats_filename, 'wb'))
+    fc7_feats, fc8_feats = get_features(image_folder + image_name)    
+    #pickle.dump(rcnn_feats, open(rcnn_feats_filename, 'wb'))
     pickle.dump(fc7_feats, open(fc7_feats_filename, 'wb'))
+    pickle.dump(fc8_feats, open(fc8_feats_filename, 'wb'))
     if i % 100 == 0:
         print 'Featurized image %d out of %d' % (i, len(image_list))
-
-print existing_feats_files, 'feature files already existed.'
