@@ -25,12 +25,12 @@ from back_ground import generate_background
 TEST_PROBA      = 0.1  # Put that proportion of images into the test set, the rest into the learning set
 IMAGE_WIDTH     = 227  # Width of the warped images
 IMAGE_HEIGHT    = 227  # Height of the warped images
-CAFFE_ROOT      = '/users/cusgadmin/caffe'
+CAFFE_ROOT      = '/Users/alvinyuan/Documents/caffe'
 TARGET_LABELS   = ['background', 'person', 'bicycle', 'bus', 'car', 'motorbike'] # These elements only will be extracted
 #
 #    Setup path to images and annotations (annotations contain labels and bounding boxes in xml format)
 #
-MAIN_DIR            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
+MAIN_DIR            = '/Users/alvinyuan/Documents/Vision/smartCams/'
 INPUT_IMAGES        = MAIN_DIR + 'VOC2012/JPEGImages/'
 ANNOTATIONS         = MAIN_DIR + 'VOC2012/Annotations/'
 BACK_GROUND_JPG     = MAIN_DIR + 'background/images/'

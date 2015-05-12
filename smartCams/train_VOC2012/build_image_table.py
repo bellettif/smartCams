@@ -12,8 +12,8 @@ import os
 import xml.etree.ElementTree as ET
 import cv2
 import numpy as np
-#import sys
-#sys.path.insert(0, '/Users/alvinyuan/Documents/Vision/caffe/python')
+import sys
+sys.path.insert(0, '/Users/alvinyuan/Documents/Vision/caffe/python')
 import caffe.io
 
 MAX_N_IMAGES = np.inf
@@ -24,8 +24,8 @@ CAFFE_ROOT   = '/Users/alvinyuan/Documents/Vision/caffe'
 
 data_set_suffix = 'all'
 
-main_dir            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
-#main_dir            = '/Users/alvinyuan/Documents/Vision/smartCams/'
+#main_dir            = '/Users/cusgadmin/smartCams/Wksp/smartCams/'
+main_dir            = '/Users/alvinyuan/Documents/Vision/smartCams/'
 image_set_folder    = main_dir + 'VOC2012/ImageSets/Main/'
 jpeg_folder         = main_dir + 'VOC2012/JPEGImages/'
 annotation_folder   = main_dir + 'VOC2012/Annotations/'
